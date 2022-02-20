@@ -257,7 +257,7 @@ function Game(props: GameProps) {
     });
 
   return (
-    <div className="Game" style={{ display: props.hidden ? "none" : "block" }}>
+    <div className="Game" style={{ display: props.hidden ? "none" : "flex" }}>
       <div className="Game-options">
         <button
           style={{ flex: "0 0 auto" }}

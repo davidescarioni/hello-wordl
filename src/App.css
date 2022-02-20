@@ -25,6 +25,7 @@ body {
   align-items: center;
   text-transform: uppercase;
   font-weight: bold;
+  transition: .6s all ease-out;
 }
 .Row-letter-color {
   margin: 2px;
@@ -53,6 +54,7 @@ body {
   flex-direction: column;
   margin: 0 auto;
   justify-content: center;
+  height: 100vh;
 }
 
 .App-container h1 {
@@ -67,10 +69,13 @@ h1 {
 .Game {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: initial;
+  height: calc(100vh - 50px);
 }
 
 table.Game-rows {
-  margin: auto;
+  /*margin: auto;*/
   display: flex;
   flex-direction: column;
 }
