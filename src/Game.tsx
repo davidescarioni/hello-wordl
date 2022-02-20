@@ -173,11 +173,11 @@ function Game(props: GameProps) {
       setHint("");
     } else if (key === "Enter") {
       if (currentGuess.length !== wordLength) {
-        setHint("Too short");
+        setHint("Parola troppo corta");
         return;
       }
       if (!dictionary.includes(currentGuess)) {
-        setHint("Not a valid word");
+        setHint("Parola non presente");
         return;
       }
       for (const g of guesses) {
@@ -192,15 +192,15 @@ function Game(props: GameProps) {
       setCurrentGuess((guess) => "");
 
       const gameOver = (verbed: string) =>
-        `Risposta esatta! La risposta è ${target.toUpperCase()}. (Premi invio per ${
+        `Hai ${verbed}! La risposta è ${target.toUpperCase()}. (Premi Enter per ${
           challenge ? "giocare ancora." : "giocare ancora."
         })`;
 
       if (currentGuess === target) {
-        setHint(gameOver("won"));
+        setHint(gameOver("vinto 🥳"));
         setGameState(GameState.Won);
       } else if (guesses.length + 1 === props.maxGuesses) {
-        setHint(gameOver("lost"));
+        setHint(gameOver("perso 😕"));
         setGameState(GameState.Lost);
       } else {
         setHint("");
