@@ -17,8 +17,8 @@ body {
   margin: 2px;
   border: 2px solid rgba(128, 128, 128, 0.8);
   flex: 1;
-  max-width: 40px;
-  height: 40px;
+  max-width: 55px;
+  height: 55px;
   font-size: 28px;
   display: flex;
   justify-content: center;
@@ -168,6 +168,7 @@ a:active {
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
+  display: none;
 }
 
 .Game-options > * + * {
@@ -208,6 +209,7 @@ a:active {
   opacity: 0.7;
   margin-top: 1em;
   font-variant-numeric: tabular-nums;
+  display: none;
 }
 
 .Game-sr-feedback,
